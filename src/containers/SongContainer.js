@@ -7,8 +7,7 @@ class SongContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      songs: [],
-      currentSong: null
+      songs: []
     };
     // this.handleSelectedSong = this.handleSelectedSong.bind(this);
   }

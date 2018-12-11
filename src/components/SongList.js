@@ -4,12 +4,13 @@ import SongDetail from './SongDetail.js'
 export default class SongList extends Component {
   render(){
 
-    const songNodes = this.props.data.map((song) => {
+    const songNodes = this.props.data.entries.map((song) => {
       return <SongDetail
       key={song.id}
-      name={song}
+      name={song["im:name"]}
       />
     })
+    console.log("songNodes", songNodes);
 
     return(
       <div className="song-list">
