@@ -4,24 +4,20 @@ import SongDetail from './SongDetail.js'
 export default class SongList extends Component {
   render(){
 
-    const songArray = this.props.data.entries;
+    // const songArray = this.props.data.entries;
+    console.log("List Props", this.props.data);
+    const songArray = this.props.data;
 
     const songNodes = songArray.map((song) => {
-      return song;
-    })
-
-    // .map((song) => {
-    //   return <SongDetail
-    //   key={song.id}
-    //   name={song["im:name"]}
-    //   />
-    // })
-    console.log("songNodes", songNodes);
+      console.log(song["im:name"].label);
+      return <SongDetail
+      name={song["im:name"].label}
+      />
+    });
 
     return(
       <div className="song-list">
       {songNodes}
-      <h2>FUCK THIS</h2>
       </div>
     )
   }

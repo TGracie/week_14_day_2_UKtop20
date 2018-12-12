@@ -25,7 +25,7 @@ class SongContainer extends React.Component {
       // console.log("Entries?", data.feed.entry);
       const entries = data.feed.entry;
       // console.log("Entries again", entries);
-      this.setState({songs: {entries}})
+      this.setState({songs: entries})
       // console.log("this.state.songs.entries", this.state.songs.entries);
     });
     request.send();
